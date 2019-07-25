@@ -1,7 +1,8 @@
 // all the JS code
 
 //const apiUrl = "https://api.wheretheiss.at/v1/satellites/25544";
-const apiUrl = "http://worldtimeapi.org/api/timezone/Europe/Amsterdam";
+const apiUrlAdam = "http://worldtimeapi.org/api/timezone/Europe/Amsterdam";
+const apiUrlLondon = "http://worldtimeapi.org/api/timezone/Europe/London";
 
 const arrayAzathioprine = [
   "bloedarmoede”, “bloedingen”, “infecties”, “vermoeidheid”, “bloedneus”, “keelpijn”, “koorts”, “misselijkheid”, “braken”, “haaruitval”, “huidkanker”, “PML”, “spierzwakte”, “overgevoeligheid”, “jeuk”, “galbulten”, “koorts”, “benauwdheid”, “flauwvallen”, “huidaandoening”, “leveraandoening"
@@ -14,16 +15,24 @@ const arrayRenitec = [
   "duizeligheid”, “maagdarmklachten”, “misselijkheid”, “buikpijn”, “diarree”, “hoofdpijn”, “vermoeidheid”, “smaakveranderingen”, “lusteloosheid”, “hartritmestoornissen”, “overgevoeligheid”, “huiduitslag”, “galbulten”, “angio-oedeem”, “zwellingen”, “benauwd”, “spierkramp”, “oorsuizen”, “haaruitval”, “blozen”, ”slaperigheid”, “slapeloosheid”, “zenuwachtigheid”, “draaiduizeligheid”, “verwardheid”, “impotentie”, “ernstige huidaandoening”,  “blaren op de huid”, “vurig rode huis”, “griepachtige verschijnselen”, “loopneus”, “keelpijn”, “heesheid”, “kortademigheid”, “zweten”, “longontsteking”, ernstige benauwdheid”, “verminderde nierwerking”, “ontsteking van de alvleesklier”, “ontsteking van de lever”, “bloedafwijkingen”, “geelzucht”, “koorts"
 ];
 
-async function getISS() {
-  const response = await fetch(apiUrl);
+async function getAdam() {
+  const response = await fetch(apiUrlAdam);
   const data = await response.json();
   const { timezone, datetime } = data;
 
   document.getElementById("timezone").textContent = timezone;
   document.getElementById("dayTime").textContent = datetime;
 }
+getAdam();
 
-getISS();
+async function getLondon() {
+  const response = await fetch(apiUrlLondon);
+  const data = await response.json();
+  const { timezone, datetime } = data;
+
+  document.getElementById("timezone").textContent = timezone;
+  document.getElementById("dayTime").textContent = datetime;
+}
 
 function showValue(id, value) {
   document.getElementById(id).textContent = value;
@@ -40,6 +49,7 @@ function ENclick() {
   const ENvlag = document.getElementById("ENvlag");
   ENvlag.style.display = "none";
   localStorage.setItem("language", "NL");
+  getAdam();
   const introP = document.getElementById("intro");
   introP.innerText =
     "Not feeling right? This could be from one of the following medication. Please click one to check.";
@@ -51,9 +61,10 @@ function NLclick() {
   const ENvlag = document.getElementById("ENvlag");
   ENvlag.style.display = "block";
   localStorage.setItem("language", "EN");
+  getLondon();
   const introP = document.getElementById("intro");
   introP.innerText =
-    "Voel jij je lekker? Dit zou door je medicatie kunnen komen. Klik en controleer welke.";
+    "Voel jij je niet lekker? Dit zou door je medicatie kunnen komen. Klik en controleer welke.";
 }
 
 function bodyOnload() {
@@ -79,6 +90,7 @@ function bodyOnload() {
       "Voel jij je niet helemaal lekker? Dit zou een bijwerking van een medicijn kunnen zijn:";
   }
 }
+
 //checks if the medication is responsible for the side effect or not
 function checkMed() {
   const invoerInput = document.getElementById("invoerKlacht").value;
