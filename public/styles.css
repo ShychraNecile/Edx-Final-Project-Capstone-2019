@@ -120,13 +120,16 @@ a.buttonLook {
     font-size: 15px;
 }
 
-#main-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #4682B4;
-    color: #000033;
-    height: 52px;
-    position: relative;
-    margin-top: -50px;
-    clear: both;
+.invulForm {
+    margin: 2rem;
+    float: left;
+}
+
+.tableForm {
+    font-size: 20px;
+    float: left;
+}
+
+.tableForm input {
+    font-size: 20px;
 }

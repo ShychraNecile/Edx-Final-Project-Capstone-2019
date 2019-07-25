@@ -34,15 +34,37 @@
           <div class="inhoud" id="titelInhoud">
             <h1 class="titel">MediCall</h1>
           </div>
-          <div class="mediInput">
-            <p class="mediIntro" id="intro">Voer je klacht in:&nbsp
-              <input type="text" id="invoerKlacht" value="" placeholder="Voer 1 klacht in" required/>
-            </p>
-          </div>
-
-
     <!-- Einde Main inhoud -->
   </body>
+  <form class="invulForm">
+      <table class="tableForm" id="table">
+          <tr>
+              <td>Soort wijziging:</td>
+              <td>
+               <input type="radio" name="Toevoegen"> Toevoegen
+               <input type="radio" name="Verwijderen"> Verwijderen
+              </td>
+             </tr>
+       <tr>
+        <td>Naam medicijn:</td>
+        <td><input type="text"></td>
+       </tr>
+       <tr>
+        <td>Aantal pillen per dag:</td>
+        <td><input type="number"></td>
+       </tr>
+       <tr>
+          <td>Aantal gram per dag:</td>
+          <td><input type="decimal"></td>
+         </tr>
+       <tr>
+        <td>Startdatum medicatie:</td>
+        <td><input type="date"></td>
+       </tr>
+        <td><input type="submit" value="Submit" id="submitForm"></td>
+       </tr>
+      </table>
+     </form>
   
 </html>
 
