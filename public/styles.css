@@ -72,9 +72,16 @@ html, body {
 }
 
 .cmd2 {
-    margin-top: 10%;
+    margin-top: 2%;
     margin-right: 2rem;
     margin-bottom: 1rem;
+    float: right;
+}
+
+.cmd3 {
+    margin-top: 25%;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
     float: right;
 }
 
@@ -98,6 +105,19 @@ a.buttonLook {
     text-decoration: none;
     color: initial;
     padding: 2rem;
+}
+
+a.buttonLook2 {
+    background-color: lightgray;
+    padding: 5px 5px;
+    text-align: center;
+    display: inline-block;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+    padding: 1rem;
 }
 
 .Referenties {

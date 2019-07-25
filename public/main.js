@@ -1,6 +1,7 @@
 // all the JS code
 
-const apiUrl = "https://api.wheretheiss.at/v1/satellites/25544";
+//const apiUrl = "https://api.wheretheiss.at/v1/satellites/25544";
+const apiUrl = "http://worldtimeapi.org/api/timezone/Europe/Amsterdam";
 
 const arrayAzathioprine = [
   "bloedarmoede”, “bloedingen”, “infecties”, “vermoeidheid”, “bloedneus”, “keelpijn”, “koorts”, “misselijkheid”, “braken”, “haaruitval”, “huidkanker”, “PML”, “spierzwakte”, “overgevoeligheid”, “jeuk”, “galbulten”, “koorts”, “benauwdheid”, “flauwvallen”, “huidaandoening”, “leveraandoening"
@@ -16,11 +17,12 @@ const arrayRenitec = [
 async function getISS() {
   const response = await fetch(apiUrl);
   const data = await response.json();
-  const { latitude, longitude } = data;
+  const { timezone, datetime } = data;
 
-  document.getElementById("lat").textContent = latitude;
-  document.getElementById("lon").textContent = longitude;
+  document.getElementById("timezone").textContent = timezone;
+  document.getElementById("dayTime").textContent = datetime;
 }
+
 getISS();
 
 function showValue(id, value) {
