@@ -1,6 +1,4 @@
 // all the JS code
-
-//const apiUrl = "https://api.wheretheiss.at/v1/satellites/25544";
 const apiUrlAdam = "http://worldtimeapi.org/api/timezone/Europe/Amsterdam";
 const apiUrlLondon = "http://worldtimeapi.org/api/timezone/Europe/London";
 
@@ -42,29 +40,29 @@ function chooseMed() {
   const medication1 = document.getElementById("chooseMed");
   console.log(medication1);
 }
-// index
+
 function ENclick() {
   const NLvlag = document.getElementById("NLvlag");
   NLvlag.style.display = "block";
   const ENvlag = document.getElementById("ENvlag");
   ENvlag.style.display = "none";
   localStorage.setItem("language", "NL");
-  getAdam();
+  getLondon();
   const introP = document.getElementById("intro");
   introP.innerText =
     "Not feeling right? This could be from one of the following medication. Please click one to check.";
 }
-//index
+
 function NLclick() {
   const NLvlag = document.getElementById("NLvlag");
   NLvlag.style.display = "none";
   const ENvlag = document.getElementById("ENvlag");
   ENvlag.style.display = "block";
   localStorage.setItem("language", "EN");
-  getLondon();
+  getAdam();
   const introP = document.getElementById("intro");
   introP.innerText =
-    "Voel jij je niet lekker? Dit zou door je medicatie kunnen komen. Klik en controleer welke.";
+    "Voel jij je niet lekker? Dit zou door je medicatie kunnen komen. Klik op de medicatie die je wilt controleren.";
 }
 
 function bodyOnload() {
@@ -84,39 +82,35 @@ function bodyOnload() {
     const NLvlag = document.getElementById("ENvlag");
     NLvlag.style.display = "none";
     localStorage.setItem("language", "NL");
-    // inhoud aanpassen nav gekozen taal
-    const introP = document.getElementById("intro");
-    introP.innerText =
-      "Voel jij je niet helemaal lekker? Dit zou een bijwerking van een medicijn kunnen zijn:";
   }
 }
 
 //checks if the medication is responsible for the side effect or not
+
 function checkMed() {
   const invoerInput = document.getElementById("invoerKlacht").value;
   var item;
   const arrayAzathioprine = [
     "bloedarmoede”, “bloedingen”, “infecties”, “vermoeidheid”, “bloedneus”, “keelpijn”, “koorts”, “misselijkheid”, “braken”, “haaruitval”, “huidkanker”, “PML”, “spierzwakte”, “overgevoeligheid”, “jeuk”, “galbulten”, “koorts”, “benauwdheid”, “flauwvallen”, “huidaandoening”, “leveraandoening"
   ];
-  if (item in arrayAzathioprine != invoerInput) {
+  if (item in arrayAzathioprine === invoerInput) {
     console.log("yes");
   } else {
     console.log("Noooooooooooooo!");
   }
 }
 
+welNiet();
+function welNiet() {
+  const waarde = document.getElementById("invoerKwaal").value;
+  document.getElementById("welNiet").innerHTML = waarde;
+}
+
 function submitCheckOk() {
-  const container = document.getElementById("resultatenLijst");
-  container.style.display = "block";
-  const invoerInput = document.getElementById("invoerKlacht").value;
-  if (invoerInput) {
-    //var containerDiv = document.getElementById("container");
-    //containerDiv.style.display = "block";
-    //const medicatieLijstTextArea = document.getElementById("medicatieLijst");
-    checkMed();
-    //medicatieLijstTextArea = document.getElementById("medicatieLijst")
-    // .innerHTML;
+  const showResultaat = document.getElementById("resultatenLijst");
+  if (showResultaat.style.display === "none") {
+    showResultaat.style.display = "block";
   } else {
-    alert("Vul een kwaal in.");
+    showResultaat.style.display = "none";
   }
 }
