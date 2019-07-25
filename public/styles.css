@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.ENvlag {
+    display: none;
+}
+
+.imageFlags {
+    float: right;
+    margin-right: 2rem;
+}
+
+#container {
+    min-height: 100%;
+}
+
+#main {
+    padding-bottom: 50px;
+    background-color: F0FFF0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000033;
+}
+
+.mediIntro {
+    margin-top: 2rem;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mediInput {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mediInput input {
+    font-size: 60px;
+    color: #000080;
+    margin: auto;
+    border: solid #000080;
+}
+
+.inhoud {
+    text-align: center;
+}
+
+#titelInhoud {
+    text-align: center;
+    padding: 1rem;
+    background: #4682B4;
+    color: #000033;
+    height: 3rem;
+}
+
+.cmd {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    color: #000033;
+    background: #9bc1fa;
+    border: solid #000033;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 1rem;
+}
+
+.cmd2 {
+    margin-top: 10%;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    float: right;
+}
+
+.tile {
+    float: left;
+    padding: 10px;
+    margin: 6px 6px 6px 6px;
+    width: 250px;
+    background-color: none;
+    height: 100px;
+}
+
+a.buttonLook {
+    background-color: #4682B4;
+    padding: 15px 25px;
+    text-align: center;
+    display: inline-block;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+    padding: 2rem;
+}
+
+.Referenties {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.header {
+    text-align: center;
+    font-size: 25px;
+    padding: 15px 5px;
+}
+
+.headerTitle {
+    font-size: 20px;
+    padding-top: 2rem;
+}
+
+.lijst {
+    font-size: 15px;
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #4682B4;
+    color: #000033;
+    height: 52px;
+    position: relative;
+    margin-top: -50px;
+    clear: both;
+}

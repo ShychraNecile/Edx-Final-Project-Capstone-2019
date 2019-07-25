@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MediCall</title>
+	<link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="main.js"></script>
+    
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous"></script>
+              
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    </head>
+ <!-- einde head-->
+ <!-- Main inhoud bodyOnload="onload()"-->
+    <body onload="bodyOnload()">
+        <div id="container">
+            <div id="main">
+                <div class="inhoud" id="mainInhoud">
+                    <div class="inhoud" id="titelInhoud">
+                      <h1 class="titel">MediCall</h1>
+                    </div>
+                    <div class="lijst">
+                            <ul>
+                              <li>Alarm laatst bijgewerkt: <span id="lat"></span>
+                              <li>Laatste opgehaald: <span id="lon"></span>
+                              </li></li>
+                            </ul>
+                          </div>
+                    <div class="imageFlags">
+                            <img class="NLvlag" onclick="NLclick()" id="NLvlag" src="NlVlag.jpeg" width="50"/>
+                            &nbsp
+                            <img class="ENvlag" onclick="ENclick()" id="ENvlag" src="EngelseVlag.jpeg" width="50"/>
+                    </div>
+                    <div class="mediInput">
+                      <p class="mediIntro" id="intro">
+                        Jouw medicatie: <br />
+                      </p>
+ 
+                    <div class="tile" onclick="chooseMed()" id="chooseMed">
+                        <div class="headerTitle">
+                            <a href="pageMed1.html" target="_blank" class="buttonLook">
+                            Azathioprine</a>
+                        </div>
+
+                        </div>
+                    <div class="tile">
+                        <div class="headerTitle">
+                            <a href="pageMed2.html" target="_blank" class="buttonLook">
+                        Amlodipine</a>			
+                        </div>
+                    </div>
+
+                    <div class="tile">
+                        <div class="headerTitle">
+                            <a href="pageMed3.html" target="_blank" class="buttonLook">
+                            Renitec</a>
+                        </div>
+                </div>
+                    <div class="cmd2">
+                        <button onclick="wijzigMedicatie()">
+                            <a href="wijzigingsformulier.html" target="_blank" class="buttonLook">Medicatie wijzigen</a></button></div>
+<!-- Einde Main inhoud -->
+</body>
+</html>
