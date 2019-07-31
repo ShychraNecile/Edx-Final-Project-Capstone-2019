@@ -3,7 +3,7 @@
 ﻿Thursday 25th of July 2019 / Microsoft Entry Level Software Development: Capstone Project / Readme file by Annemarleen Bosma/ Netherlands
 
 # README
- ##PREFACE
+ ## PREFACE
 
 a] The desired application
 The idea of the app is that a user can type in the side effect he/she is experiencing and by a click of a button can find out if his/her medication could be responsible for the side effect.
@@ -21,17 +21,17 @@ The first page. The user now comes to the homepage and has to choose the medicat
 
 When clicking on the medication-button, he/she will be sent to the particular page of that medication and on THAT page he/she has to fill in the side effect. The result will be a confirmation or a decline.
 
-##GOOD TO KNOW
+## GOOD TO KNOW
 Chosen Technologies & libraries: 	HTML5, CSS, JavaScript, JSON
 Server: 							Node.js, Express
 Language:							JavaScript
 IDE:								Visual Studio Code
 
 
-##INSTRUCTION: walkthrough
+## INSTRUCTION: walkthrough
 **STRUCTURE OF FOLDER:  Edx-Final-Project-Capstone-2019**
 
-Main folder: Edx-Final-Project-Capstone-2019.  
+### MAIN folder: Edx-Final-Project-Capstone-2019.  
 
 This folder contains:
 
@@ -51,7 +51,7 @@ This folder contains:
 If everything goes well, the terminal will show the following: 
 Express app listening on port 3000
 
-###PUBLIC folder
+### PUBLIC folder
 
 This folder contains the following files:
 
