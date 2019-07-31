@@ -2,8 +2,8 @@
 
 ﻿Thursday 25th of July 2019 / Microsoft Entry Level Software Development: Capstone Project / Readme file by Annemarleen Bosma/ Netherlands
 
-# README
- ## PREFACE
+## README
+#### PREFACE
 
 a] The desired application
 The idea of the app is that a user can type in the side effect he/she is experiencing and by a click of a button can find out if his/her medication could be responsible for the side effect.
@@ -21,17 +21,17 @@ The first page. The user now comes to the homepage and has to choose the medicat
 
 When clicking on the medication-button, he/she will be sent to the particular page of that medication and on THAT page he/she has to fill in the side effect. The result will be a confirmation or a decline.
 
-## GOOD TO KNOW
+#### GOOD TO KNOW
 Chosen Technologies & libraries: 	HTML5, CSS, JavaScript, JSON
 Server: 							Node.js, Express
 Language:							JavaScript
 IDE:								Visual Studio Code
 
 
-## INSTRUCTION: walkthrough
+#### INSTRUCTION: walkthrough
 **STRUCTURE OF FOLDER:  Edx-Final-Project-Capstone-2019**
 
-### MAIN folder: Edx-Final-Project-Capstone-2019.  
+##### MAIN folder: Edx-Final-Project-Capstone-2019.  
 
 This folder contains:
 
@@ -45,30 +45,32 @@ This folder contains:
 
 **Launching project**
 – Open the Edx-Final-Project-Capstone-2019 folder in your IDE. I used Visual Studio Code for this.
+
 – open package.json and in the terminal:
 > Run: npm install  
 > Run: node index.js
+
 If everything goes well, the terminal will show the following: 
 Express app listening on port 3000
 
-### PUBLIC folder
+##### PUBLIC folder
 
 This folder contains the following files:
 
 1. index.html (title: MediCall)
 This is the index/main page(first page you’ll land on). On this page you can:
 
-– toggle between the Dutch Flag and the Flag of Great Brittain.[requirement 2] Do so and the bold text in the middle will change language. [requirement 7] 
-– see the date and time. I used jquery to create an ajax call. [requirement 6]
-– click on the blue buttons in the middle with the names of some medication on them. By clicking you will be redirected to another page. [requirement 1]
+- toggle between the Dutch Flag and the Flag of Great Brittain.[requirement 2] Do so and the bold text in the middle will change language. [requirement 7] 
+- see the date and time. I used jquery to create an ajax call. [requirement 6]
+- click on the blue buttons in the middle with the names of some medication on them. By clicking you will be redirected to another page. [requirement 1]
 
 2. pageMed1.html (title: Medicatie 1)
 When you choose one of the ‘medication’ buttons, you will be send to the homepage of that medication.
 On the page you can:
 
 - enter the side effect you are suffering from. When you click on the ‘ok’ button, a confirmation will appear and tell you which side effect you chose AND will tell you if the medication could be responsible for this side effect.
-– deny entering anything in the input area. A popup will appear to command you to DO enter a value.[requirement 2]
-– go to the homepage by clicking on the ‘Home’ button.
+- deny entering anything in the input area. A popup will appear to command you to DO enter a value.[requirement 2]
+- go to the homepage by clicking on the ‘Home’ button.
 
 3. pageMed2.html title: Medicatie 2)
 Same as point 2.
@@ -79,10 +81,10 @@ Same as point 2.
 5. wijzigingsformulier.html (title: wijzigingsformulier)
 When you are sent here by the home page after clicking on the button Medicatie wijzigen. On this page you can:
 
-– choose if you want to add (Toevoegen) or delete (Verwijderen) a medication.
-– enter the name of the medication [requirement 1] [string]
-– enter an amount off pills [requirement 1] [number]
-– enter the date when you started/will start with the new medication [requirement 1] [date]
+- choose if you want to add (Toevoegen) or delete (Verwijderen) a medication.
+- enter the name of the medication [requirement 1] [string]
+- enter an amount off pills [requirement 1] [number]
+- enter the date when you started/will start with the new medication [requirement 1] [date]
 
 6. main.js
 This file holds all the methods, code and event handlers that are used in the pages.
@@ -104,8 +106,8 @@ MAIN PROJECT REQUIREMENTS
 7. At least one string is localisable. 
 //
 
-##SCENARIOS of my design documentation
-###- Scenario 1 - 
+##### SCENARIOS of my design documentation
+*- Scenario 1 -* 
 Anne is checking online if her side effects are caused by her medication.
 
 Introduction, situation and outcome
@@ -117,7 +119,7 @@ She does have frequent headaches and trouble sleeping. She already takes medicat
 
 The best way to find out quickly if some of the disorders come from the medication is looking on the internet. A downfall is that Anne sees so much, and it isn’t all that pretty. She decides to check the leaflets and with a yellow marker markes the side effects she is experiencing. This way, if she undergoes any of the side effects again she can check rather quickly if it’s caused from one of her medication.
 
-###- Scenario 2 -  
+*- Scenario 2 -*  
 Jan wants to be able to read his leaflets easily.
 
 Introduction, situation, outcome
